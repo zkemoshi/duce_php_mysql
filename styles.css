@@ -1,0 +1,53 @@
+.regContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.regForm {
+  width: 400px;
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.regForm input {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: green;
+  color: blue;
+  cursor: pointer;
+}
+
+.container nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logout {
+  text-decoration: none;
+  background-color: #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+nav li {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+}
