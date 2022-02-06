@@ -5,7 +5,7 @@ include 'db.php';
 
 $usernameExist = '';
 
-
+// registration
 if(isset($_POST['register']))
 {
   
@@ -14,6 +14,7 @@ if(isset($_POST['register']))
   $mobile = mysqli_real_escape_string($dbconnect, $_POST['mobile']);
   $password = mysqli_real_escape_string($dbconnect, $_POST['password']);
 
+  // check if user already exist
   $user_check_query = "SELECT * FROM student WHERE email='$email' LIMIT 1";
   $result = mysqli_query($dbconnect, $user_check_query);
   $user = mysqli_fetch_assoc($result);
@@ -21,11 +22,12 @@ if(isset($_POST['register']))
   if($user){
             $usernameExist='Please user already exist';
   } else {
+    // add user to database
     $insert_student_query = "INSERT INTO student (fullName, email, mobile, password) VALUES('$fullName', '$email','$mobile', '$password')";
   	
     mysqli_query($dbconnect, $insert_student_query);
 
-  	$_SESSION['fullName'] = $fullName;
+  	$_SESSION['fullName'] = "Student: $fullName";
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
 

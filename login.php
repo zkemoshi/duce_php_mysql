@@ -3,6 +3,7 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 ?>
+
 <?php include 'server.php'; ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,9 @@ error_reporting(E_ALL);
         <input type="password" name="password" id="password" placeholder='Enter your password' required>
 
         <input type="submit" value="Login" name='login' class='btn'>
+        <p>If you are not a Member <a href="registration.php">Register</a></p>
       </form>
+
     </div>
   </div>
 </body>

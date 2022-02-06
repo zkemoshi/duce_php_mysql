@@ -1,9 +1,9 @@
 <?php 
 include 'server.php';
 
-// if(!$_SESSION['fullName']){
-//   header('location: index.php');
-// }
+if(!$_SESSION['fullName']){
+  header('location: login.php');
+}
 
 
 ?>
@@ -27,7 +27,7 @@ include 'server.php';
   <div class="container">
     
     <h1>Welcome to Changombe Secondary School</h1>
-    <h2>Student: <?php echo $_SESSION['fullName']; ?></h2>
+    <h2><?php echo $_SESSION['fullName']; ?></h2>
     <h2><?php echo $_SESSION['success']; ?></h2>
   </div>
 </body>
